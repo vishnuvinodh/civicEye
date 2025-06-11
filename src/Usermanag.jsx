@@ -12,7 +12,7 @@ const Usermanag = () => {
 
   const adcom = async () => {
     try {
-      const response = await axios.get(`https://civiceye-1-tqmf.onrender.com/admincomplaint`, {
+      const response = await axios.get(`https://civiceye-1-tqmf.onrender.com/user/admincomplaint`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setData(response.data);
