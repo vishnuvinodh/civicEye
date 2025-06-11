@@ -10,8 +10,8 @@ const Feedback = () => {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const token = localStorage.getItem("token");  
-        const response = await axios.get('http://localhost:5002/user/feedview', {
+        const token = localStorage.getItem("token"); 
+        const response = await axios.get('https://civiceye-1-tqmf.onrender.com/user/feedview', {
           headers: { Authorization: `Bearer ${token}` } 
         });
         setFeedbackdata(response.data);

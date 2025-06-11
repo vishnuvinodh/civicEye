@@ -51,7 +51,7 @@ const Page = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:5002/user/feedbkk`, {
+      const response = await axios.post(`https://civiceye-1-tqmf.onrender.com/user/feedbkk`, {
         feedcondent: feedbackContent,
         userId: id
       });
@@ -73,7 +73,7 @@ const Page = () => {
     const viewFeedback = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await axios.get(`http://localhost:5002/user/feedview`, {
+        const response = await axios.get(`https://civiceye-1-tqmf.onrender.com/user/feedview`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setFeedbackList(response.data);
@@ -87,7 +87,7 @@ const Page = () => {
   useEffect(() => {
   const fetchStats = async () => {
     try {
-      const response = await axios.get('http://localhost:5002/user/adminstats');
+      const response = await axios.get('https://civiceye-1-tqmf.onrender.com/user/adminstats');
       console.log('Fetched stats:', response.data);
 
       setStats({

@@ -82,7 +82,7 @@ const Overv = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await axios.get('http://localhost:5002/user/adminstats');
+        const response = await axios.get('https://civiceye-1-tqmf.onrender.com/user/adminstats');
         setStats(response.data);
       } catch (error) {
         console.error('Error fetching admin stats:', error);

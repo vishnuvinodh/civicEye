@@ -14,7 +14,7 @@ const Profi = () => {
   useEffect(()=>{
 
     const flatchdata=async()=>{
-        const response=await axios.get(`http://localhost:5002/user/viweuser/${id}`);
+        const response=await axios.get(`https://civiceye-1-tqmf.onrender.com/user/viweuser/${id}`);
         setFormData(response.data)
     };
     flatchdata()
@@ -33,7 +33,7 @@ const Profi = () => {
 
   const handleSubmit = async () => {
     try {
-      await axios.put(`http://localhost:5002/user/updateuser/${id}`, formData, {
+      await axios.put(`https://civiceye-1-tqmf.onrender.com/user/updateuser/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`
         }

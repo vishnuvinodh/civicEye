@@ -13,7 +13,7 @@ const Usercomplaints = () => {
 
   const uscomp = async () => {
   try {
-    let respons = await axios.get(`http://localhost:5002/user/viwcomp/${id}`, {
+    let respons = await axios.get(`https://civiceye-1-tqmf.onrender.com/user/viwcomp/${id}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
     console.log("API Response:", respons.data);

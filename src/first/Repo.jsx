@@ -30,7 +30,7 @@ const Repo = () => {
       
 
     try {
-      await axios.post('http://localhost:5002/user/regcomplaint', data);
+      await axios.post('https://civiceye-1-tqmf.onrender.com/user/regcomplaint', data);
 
       toast.success("Complaint submitted!");
     } catch (erorr) {

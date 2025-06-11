@@ -11,7 +11,7 @@ const Complaints = () => {
 
   const adcom = async () => {
     try {
-      const response = await axios.get(`http://localhost:5002/user/admincomplaint`, {
+      const response = await axios.get(`https://civiceye-1-tqmf.onrender.com/user/admincomplaint`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const sortDate = response.data.sort((a, b) => new Date(b.complaints.createdAt) - new Date(a.complaints.createdAt));
@@ -25,8 +25,7 @@ const Complaints = () => {
 
   const updateStatus = async (complaintId, newStatus) => {
     try {
-      await axios.put(
-        `http://localhost:5002/user/admincomplaint/status/${complaintId}`,
+      await axios.put(`https://civiceye-1-tqmf.onrender.com/user/admincomplaint/status/${complaintId}`,
         { status: newStatus },
         {
           headers: { Authorization: `Bearer ${token}` }
