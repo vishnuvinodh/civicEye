@@ -15,7 +15,7 @@ const Reg = () => {
    }
    const handlesubmit=async(event)=>{
     event.preventDefault()
-    let respons=await axios.post('http://localhost:5002/user/register',{...data,usertype:"user"})
+    let respons=await axios.post('https://civiceye-1-tqmf.onrender.com/user/register',{...data,usertype:"user"})
     console.log(respons);
     toast.success("Regstration Successful!")
     navigate('/log')
