@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer,toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const Repo = () => {
   const [formdata, setFormData] = useState({ description: '',complainttype: '',location: '',  file: null, userId: localStorage.getItem("id") || ''  });
   const id=localStorage.getItem("id")
-
+  const navigate=useNavigate();
   const handleChange = (event) => {
   const { name, value } = event.target;
   setFormData(prev => ({ ...prev, [name]: value }));
@@ -33,6 +34,10 @@ const Repo = () => {
       await axios.post('https://civiceye-1-tqmf.onrender.com/user/regcomplaint', data);
 
       toast.success("Complaint submitted!");
+      setTimeout(() => {
+      navigate('/page');
+    }, 2000);
+
     } catch (erorr) {
       console.error(erorr);
       toast.error("Failed to submit complaint");
@@ -41,6 +46,7 @@ const Repo = () => {
 
   return (
      <div className='min-h-screen flex flex-col  items-center justify-center'>
+      <Link to="/page" className='' ><button className='w-28 h-9 bg-blue-400 text-white rounded-md mb-6 border'>Back</button></Link>
       <div className='w-full max-w-5xl border shadow-md rounded-xl flex-col flex p-10'> 
       
       <div className='flex flex-col  items-center justify-center mb-8'>
@@ -80,7 +86,7 @@ const Repo = () => {
 
         <div className='flex gap-10 justify-center items-center'>
             <button className='h-12 bg-blue-700 w-[275px] rounded-lg  hover:bg-blue-200 hover:text-blue-600 ' type='submit'>Submit</button>
-            <button className='h-12 bg-blue-700 w-[275px] rounded-lg  hover:bg-blue-200 hover:text-blue-600' type='submit'>Cancel</button>
+           <Link to="/page"><button className='h-12 bg-blue-700 w-[275px] rounded-lg  hover:bg-blue-200 hover:text-blue-600'>Cancel</button></Link> 
         </div>
         </form>
        </div>

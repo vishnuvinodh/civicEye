@@ -3,6 +3,7 @@ import k from './Logo.png'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 
 const Profi = () => {
@@ -49,6 +50,7 @@ const Profi = () => {
 
   return (
     <div className='min-h-screen flex flex-col items-center justify-center'>
+      <Link to="/page" ><button className='w-28 h-9 bg-blue-400 text-white rounded-md mb-6 border'>Back</button></Link>
         <div className='w-full max-w-5xl border shadow-md rounded-xl p-10'>
         <h1 className='w-56 h-14 mb-16'><img src={k} /></h1>
          <form className='flex gap-16' onSubmit={handleSubmit}>

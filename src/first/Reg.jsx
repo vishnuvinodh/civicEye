@@ -13,15 +13,24 @@ const Reg = () => {
    const handlechange=(event)=>{
     setdata({...data,[event.target.name]:event.target.value})
    }
-   const handlesubmit=async(event)=>{
-    event.preventDefault()
-    let respons=await axios.post('https://civiceye-1-tqmf.onrender.com/user/register',{...data,usertype:"user"})
+   const handlesubmit = async (event) => {
+  event.preventDefault();
+  try {
+    const respons = await axios.post('https://civiceye-1-tqmf.onrender.com/user/register', {
+      ...data,
+      usertype: "user",
+    });
     console.log(respons);
-    toast.success("Regstration Successful!")
-    navigate('/log')
-    
-   }
-   console.log(data);
+    toast.success("Registration Successful!");
+    setTimeout(() => {
+      navigate('/log');
+    }, 2000);
+  } catch (error) {
+    toast.error("Registration failed! Please try again.");
+    console.error(error);
+  }
+};
+
     
 
   return (

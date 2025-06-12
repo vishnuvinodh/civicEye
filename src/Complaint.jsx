@@ -53,12 +53,7 @@ const Complaints = () => {
 
   return (
     <div className='p-7'>
-      <div className='mb-6 flex gap-6'>
-        <button className='rounded-md shadow-md px-4 py-2 bg-white'>Sort by Date</button>
-        <button className='rounded-md shadow-md px-4 py-2 bg-white'>Sort by Type</button>
-        <div className='text-[25px] ml-auto'><MdDownload /></div>
-      </div>
-
+      
       <table className="w-full text-sm border text-left text-black mt-6">
         <thead className="text-xs uppercase bg-gray-100 text-black">
           <tr>

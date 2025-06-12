@@ -114,7 +114,7 @@ const Page = () => {
           <Link to="/"><h2 className='hover:text-red-600 font-bold text-lg'>Home</h2></Link>
           <Link to="/usercomp"><h2 className='hover:text-red-600 font-bold text-lg'>MyComplaints</h2></Link>
           <Link to="/about" ><h2 className='hover:text-red-600 font-bold text-lg'>About</h2></Link>
-          <h2 className='hover:text-red-600 font-bold text-lg'>Contact</h2>
+           <Link to="/contact" ><h2 className='hover:text-red-600 font-bold text-lg'>Contact</h2></Link> 
         </div>
 
         <div className='relative'>

@@ -6,10 +6,7 @@ import { FaPersonCircleExclamation } from "react-icons/fa6";
 import { BiSolidFileBlank } from "react-icons/bi";
 import { BsPersonFillGear } from "react-icons/bs";
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
-import { FaCalendarAlt } from "react-icons/fa";
-import { IoCheckmarkCircleOutline } from "react-icons/io5";
-import { LuClock } from "react-icons/lu";
-import { CgPlayListRemove } from "react-icons/cg";
+
 
 
 import Overv from '../Overv';
@@ -30,17 +27,17 @@ const Adp1 = () => {
   };
 
   return (
-    <div className='flex gap-2 p-3'>
+    <div className='flex gap-2 '>
         <div className='w-1/4'> 
           <div className='flex flex-col justify-center items-center'>
             <img src={ca} alt=""  className='w-60'/>
           </div>
 
           <div className='flex flex-col text-[22px] font-bold mt-24 ml-8'>
-           <Link to="/admin" ><button className='flex items-center mb-3 gap-2 hover:bg-blue-500 hover:text-white w-72 rounded-lg p-2'><VscGraphLine /><h2> Overview</h2> </button></Link>
-           <Link to="/admin/complaint" > <button className='flex items-center mb-3 gap-2 hover:bg-blue-500 hover:text-white  w-72 rounded-lg p-2'><FaPersonCircleExclamation /><h2>Complaints</h2></button></Link>
-           <Link to="/admin/usermanag" ><button className='flex items-center mb-3 gap-2 hover:bg-blue-500 hover:text-white w-72 rounded-lg p-2'><IoPerson /><h2>User Management</h2></button></Link>
-          <Link to="/admin/feedback" > <button className='flex items-center mb-3 gap-2 hover:bg-blue-500 hover:text-white  w-72 rounded-lg p-2'><BiSolidFileBlank /><h2>Feedback</h2></button></Link>
+           <Link to="/admin" ><button className='flex items-center mb-3 gap-2  text-black bg-blue-500 hover:bg-blue-200 hover:text-blue-500 w-72 rounded-lg p-2'><VscGraphLine /><h2> Overview</h2> </button></Link>
+           <Link to="/admin/complaint" > <button className='flex items-center mb-3 gap-2 text-black bg-blue-500 hover:bg-blue-200 hover:text-blue-500  w-72 rounded-lg p-2'><FaPersonCircleExclamation /><h2>Complaints</h2></button></Link>
+           <Link to="/admin/usermanag" ><button className='flex items-center mb-3 gap-2  text-black bg-blue-500 hover:bg-blue-200 hover:text-blue-500 w-72 rounded-lg p-2'><IoPerson /><h2>User Management</h2></button></Link>
+          <Link to="/admin/feedback" > <button className='flex items-center mb-3 gap-2  text-black bg-blue-500 hover:bg-blue-200 hover:text-blue-500  w-72 rounded-lg p-2'><BiSolidFileBlank /><h2>Feedback</h2></button></Link>
           </div>
           
           <div className='flex flex-col text-[22px] font-bold ml-8 '>
